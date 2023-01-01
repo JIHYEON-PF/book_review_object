@@ -13,6 +13,10 @@ public class TicketOffice {
         this.tickets = Arrays.asList(tickets);
     }
 
+    public void sellTicketTo(Audience audience) {
+        plusAmount(audience.buy(getTicket()));
+    }
+
     public Ticket getTicket() {
         return tickets.remove(0);
     }
