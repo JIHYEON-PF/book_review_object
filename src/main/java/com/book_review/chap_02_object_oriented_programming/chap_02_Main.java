@@ -42,7 +42,7 @@ public class chap_02_Main {
                 "스타워즈",
                 Duration.ofMinutes(210),
                 Money.wons(10000),
-                new NonDefaultDiscountPolicy()
+                new NonDiscountPolicy()
         );
     }
 }
