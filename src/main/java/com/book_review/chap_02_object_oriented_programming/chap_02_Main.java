@@ -2,9 +2,9 @@ package com.book_review.chap_02_object_oriented_programming;
 
 import com.book_review.chap_02_object_oriented_programming.DiscountConditionImpl.PeriodCondition;
 import com.book_review.chap_02_object_oriented_programming.DiscountConditionImpl.SequenceCondition;
-import com.book_review.chap_02_object_oriented_programming.DiscountPolicyImpl.AmountDefaultDiscountPolicy;
-import com.book_review.chap_02_object_oriented_programming.DiscountPolicyImpl.NonDefaultDiscountPolicy;
-import com.book_review.chap_02_object_oriented_programming.DiscountPolicyImpl.PercentDefaultDiscountPolicy;
+import com.book_review.chap_02_object_oriented_programming.DiscountPolicyImpl.AmountDiscountPolicy;
+import com.book_review.chap_02_object_oriented_programming.DiscountPolicyImpl.NonDiscountPolicy;
+import com.book_review.chap_02_object_oriented_programming.DiscountPolicyImpl.PercentDiscountPolicy;
 
 import java.time.DayOfWeek;
 import java.time.Duration;
@@ -17,7 +17,7 @@ public class chap_02_Main {
                 "아바타",
                 Duration.ofMinutes(120),
                 Money.wons(10000),
-                new AmountDefaultDiscountPolicy(
+                new AmountDiscountPolicy(
                         Money.wons(800),
                         new SequenceCondition(1),
                         new SequenceCondition(10),
@@ -30,7 +30,7 @@ public class chap_02_Main {
                 "타이타닉",
                 Duration.ofMinutes(180),
                 Money.wons(11000),
-                new PercentDefaultDiscountPolicy(
+                new PercentDiscountPolicy(
                         0.1,
                         new PeriodCondition(DayOfWeek.TUESDAY, LocalTime.of(14,0), LocalTime.of(16,59)),
                         new SequenceCondition(2),

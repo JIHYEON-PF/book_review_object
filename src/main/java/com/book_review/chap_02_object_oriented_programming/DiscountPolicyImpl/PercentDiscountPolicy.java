@@ -1,11 +1,8 @@
 package com.book_review.chap_02_object_oriented_programming.DiscountPolicyImpl;
 
-import com.book_review.chap_02_object_oriented_programming.DiscountCondition;
-import com.book_review.chap_02_object_oriented_programming.DiscountPolicy;
-import com.book_review.chap_02_object_oriented_programming.Money;
-import com.book_review.chap_02_object_oriented_programming.Screening;
+import com.book_review.chap_02_object_oriented_programming.*;
 
-public class PercentDiscountPolicy extends DiscountPolicy {
+public class PercentDiscountPolicy extends DefaultDiscountPolicy {
     private double percent;
 
     public PercentDiscountPolicy(double percent, DiscountCondition... conditions) {
