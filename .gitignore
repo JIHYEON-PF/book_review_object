@@ -125,4 +125,14 @@ Temporary Items
 ### DS_store ###
 .DS_store
 
+### gradle ###
+gradle
+.gradle/*
+
+### .idea ###
+.idea
+
+### build ###
+build
+
 # End of https://www.toptal.com/developers/gitignore/api/intellij+all,macos
