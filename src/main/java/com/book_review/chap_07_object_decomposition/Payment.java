@@ -21,7 +21,6 @@ public class Payment {
     public static void payment(String name) {
         // 사용자로부터 소득세율을 입력받는다.
         double taxRate = getTaxRate();
-        System.out.println("taxRate = " + taxRate);
 
         // 직원의 급여를 계산한다.
         double pay = calculatePayFor(name, taxRate);
